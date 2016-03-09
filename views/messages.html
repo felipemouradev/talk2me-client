@@ -1,0 +1,29 @@
+<div class="container" ng-controller="messageController">
+  <div class="section scroll">
+      <div ng-repeat="messages in data_messages">
+          <p class="message_col" data-collapsible="accordion"><b>{{ messages.user.login}}: </b> {{ messages.message }}
+              <p class="cloak"><i>{{ messages.created_at }}</i></p>
+          </p>
+      </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div ng-controller="messageController">
+   <form class="messages">
+       <div class="row">
+           <div class="col s12 m8 l9">
+              <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="textarea1" ng-model="message" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Message</label>
+                  </div>
+                  <div class="input-field col s7">
+                   <button class="btn waves-effect waves-light s12" type="submit" ng-click="newMessage()">Enviar
+                     <i class="material-icons right">send</i>
+                   </button>
+                 </div>
+              </div>
+           </div>
+       </div>
+   </form>
+</div>

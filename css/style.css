@@ -1,0 +1,38 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.messages {
+    float:left;
+    padding-top:15%;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+}
+.enviar{
+    float:left;
+}
+.scroll {
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 8px;
+    padding-bottom: 15%;
+}
+.cloak{
+    font-size: 10px;
+}
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}

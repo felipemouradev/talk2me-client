@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Talk2Me</title>
+
+  <!-- CSS  -->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!--  Scripts-->
+  <script src="js/cordova.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/appController.js"></script>
+  <script src="js/messageController.js"></script>
+  <script src="js/singupController.js"></script>
+  <script src="js/loginController.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/index.js"></script>
+
+  <script type="text/javascript">
+        app.initialize();
+    </script>
+
+</head>
+<body>
+  <div id="nvapp"></div>
+
+  <div ng-view></div>
+
+  </body>
+</html>

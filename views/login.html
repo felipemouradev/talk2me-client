@@ -1,0 +1,52 @@
+<div>
+    <div class="conteiner" ng-controller="loginController">
+    <h1 class="header center blue-text">Talk2Me</h1>
+    <div class="row center">
+        <h5 class="header col s12 light">Faça Login</h5>
+    </div>
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Login" id="login" type="text" class="validate" ng-model="f.login">
+              <label for="login">Login</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" ng-model="f.password">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 center">
+                <a class="waves-effect waves-light btn" ng-click="loginAjax()">Entrar</a><!--<i class="material-icons left">cloud</i>-->
+                <p class="center">OU</p>
+                <p class="center"><a href="#/singup" class="waves-effect waves-light btn">Cadastre-se!</a></p>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div id="error-modal" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>:(</h4>
+      <p>Usuario ou senha invalidos</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+    </div>
+</div>
+<!-- MODAL -->
+<!-- <div id="success-modal" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Parabéns</h4>
+      <p>Cadastro efetuado com sucesso</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div> -->
