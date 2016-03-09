@@ -2,7 +2,7 @@
 
 var app  = angular.module('app', ['ngRoute']);
 
-var base = "http://localhost:8000";
+var base = "http://31.220.109.26";
 
 var user = JSON.parse(localStorage.getItem('user'));
 
