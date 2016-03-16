@@ -4,6 +4,7 @@ app.controller('loginController',function($scope,$http) {
         console.log($scope.f);
         $http({method: 'POST', url: base+'/request-token', data: $scope.f })
             .then(function successCallback(data, status, headers, config) {
+
                 localStorage.setItem('user',JSON.stringify(data.data.user));
                 $scope.redirectTo();
             },
@@ -20,21 +21,6 @@ app.controller('loginController',function($scope,$http) {
         }
     }
 
-    // $scope.getNewToken = function() {
-    //       $http({method: 'GET', url: base+'/get-new-token'})
-    //             .then(function successCallback(data, status, headers, config) {
-    //                 localStorage.setItem('user',JSON.stringify(data.data.user));
-    //                 $scope.renewUserToken();
-    //             },
-    //             function errorCallback(data, status, headers, config) {
-    //                 alert('Aconteceu alguma coisa com seu token');
-    //             });
-    // }
-    //
-    // $scope.renewUserToken = function () {
-    //     user = localStorage.getItem('user');
-    // }
-
-    $scope.redirectTo();
+    // $scope.redirectTo();
 
 });

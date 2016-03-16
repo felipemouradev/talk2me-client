@@ -2,9 +2,9 @@
 
 var app  = angular.module('app', ['ngRoute']);
 
-var base = "http://31.220.109.26";
+var base = "http://31.220.106.26";
 
-var user = JSON.parse(localStorage.getItem('user'));
+var user = (localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')) : null;
 
 app.config(function($routeProvider,$compileProvider){
     //$compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
@@ -15,20 +15,3 @@ app.config(function($routeProvider,$compileProvider){
     .when('/login', {templateUrl: 'views/login.html', controller: 'loginController'})
     .otherwise({redirectTo: '/login' })
 });
-
-// app.controller('appController',function($scope,$http) {
-//     $scope.getNewToken = function() {
-//           $http({method: 'GET', url: base+'/get-new-token'})
-//                 .then(function successCallback(data, status, headers, config) {
-//                     localStorage.setItem('user',JSON.stringify(data.data.user));
-//                     $scope.renewUserToken();
-//                 },
-//                 function errorCallback(data, status, headers, config) {
-//                     alert('Aconteceu alguma coisa com seu token');
-//                 });
-//     }
-//
-//     $scope.renewUserToken = function () {
-//         user = localStorage.getItem('user');
-//     }
-// });

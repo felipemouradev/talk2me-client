@@ -1,8 +1,6 @@
 (function($){
   $(function(){
 
-
-
     $('body').on('click', '.button-collapse', function() {
         $('.button-collapse').sideNav();
     });

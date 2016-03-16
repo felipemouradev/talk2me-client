@@ -1,10 +1,16 @@
+<div ng-controller="messageController">
+    <div ng-include="'views/menu.html'"></div>
+</div>
+
 <div class="container" ng-controller="messageController">
   <div class="section scroll">
-      <div ng-repeat="messages in data_messages">
+
+      <div ng-repeat="messages in data_messages" ng-class="{'first': $first, 'last': $last}" >
           <p class="message_col" data-collapsible="accordion"><b>{{ messages.user.login}}: </b> {{ messages.message }}
               <p class="cloak"><i>{{ messages.created_at }}</i></p>
           </p>
       </div>
+
   </div>
 </div>
 <div class="clearfix"></div>
